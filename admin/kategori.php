@@ -62,6 +62,12 @@
       <ul class="d-flex align-items-center">
         <li class="nav-item dropdown pe-3">
 
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle" href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon -->
+
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/2.jpg" alt="Profile" class="rounded-circle">
           </a><!-- End Profile Iamge Icon -->
@@ -161,7 +167,6 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Beranda</a></li>
           <li class="breadcrumb-item">Kategori Produk</li>
-          <li class="breadcrumb-item active">Edit</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
