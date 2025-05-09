@@ -192,6 +192,7 @@
                                         <th scope="col">Nama Produk</th>
                                         <th scope="col">Harga</th>
                                         <th scope="col">Stok</th>
+                                        <th scope="col">Deskripsi</th>
                                         <th scope="col">Nama Kategori</th>
                                         <th scope="col">Gambar</th>
                                         <th scope="col">Aksi</th>
@@ -206,7 +207,7 @@
                                     $query = isset($_GET['query']) ? mysqli_real_escape_string($koneksi, $_GET['query']) : '';
 
                                     // Tambahkan WHERE jika query tidak kosong
-                                    $sql_query = "SELECT tb_produk.*, tb_kategori.nm_kategori FROM tb_produk LEFT JOIN tb_kategori ON tb_produk.id_kategori";
+                                    $sql_query = "SELECT tb_produk.*, tb_kategori.nm_kategori FROM tb_produk LEFT JOIN tb_kategori ON tb_produk.id_kategori = tb_kategori.id_kategori ";
 
                                     if (!empty($query)) {
                                         $sql_query .= "WHERE tb_produk.nm_produk LIKE '%$query%' OR tb_kategoroi.nm_kategori LIKE '%$query%' OR tb_produk.desk LIKE '%$query%'";
@@ -235,10 +236,10 @@
                                                     <?php } ?>
                                                     </td>
                                                     <td>
-                                                        <a herf="e_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-warning">
+                                                        <a href="e_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-warning">
                                                             <i class="bi bi-pencil-square"></i>
                                                          </a>
-                                                         <a herf="h_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">
+                                                         <a href="h_produk.php?id=<?php echo $hasil['id_produk']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">
                                                             <i class="bi bi-trash"></i>
                                                     </a>
                                                 </td>
