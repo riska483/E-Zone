@@ -94,17 +94,17 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.php">
+        <a class="nav-link collapsed" href="index.php">
           <i class="bi bi-grid"></i>
           <span>Beranda</span>
         </a>
-      </li><!-- End Dashboard Nav -->
+      </li><!-- End Beranda Nav -->
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori.php">
+        <a class="nav-link" href="kategori.php">
         <i class="bi bi-list-task"></i>
-          <span>Kategori</span>
+          <span>Kategori Produk</span>
         </a>
       </li><!-- End Kategori Page Nav -->
 
@@ -120,21 +120,21 @@
           <i class="bi bi-cart"></i>
           <span>Keranjang</span>
         </a>
-      </li><!-- End Contact Page Nav -->
+      </li><!-- End Keranjang Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="transaksi.php">
           <i class="bi bi-cash"></i>
           <span>Transaksi</span>
         </a>
-      </li><!-- End Register Page Nav -->
+      </li><!-- End Transaksi Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="laporan.php">
           <i class="bi bi-clipboard-data"></i>
           <span>Laporan</span>
         </a>
-      </li><!-- End Login Page Nav -->
+      </li><!-- End Laporan Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pengguna.php">

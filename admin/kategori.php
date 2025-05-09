@@ -118,7 +118,7 @@
     <i class="bi bi-list-task"></i>
       <span>Kategori Produk</span>
     </a>
-  </li><!-- End Kategori Page Nav -->
+  </li><!-- End Kategori Produk Page Nav -->
 
   <li class="nav-item">
     <a class="nav-link collapsed" href="produk.php">
