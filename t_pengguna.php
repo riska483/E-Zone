@@ -1,4 +1,19 @@
 <?php
+session_start();
+include "koneksi.php";
+
+if (!isset($_SESSION['login'])) {
+  header("Location: login.php");
+  exit;
+}
+
+if (!isset($_SESSION['status']) || $_SESSION['status'] !== 'admin') {
+  echo "<script>alert('Anda tidak memiliki akses sebagai admin');</script>";
+  header("Location: login.php");
+  exit;
+}
+?>
+<?php
 include "koneksi.php";
 
 if (isset($_POST['simpan'])) {
@@ -100,7 +115,7 @@ if (isset($_POST['simpan'])) {
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="Logout.php">
+                            <a class="dropdown-item d-flex align-items-center" href="logout.php">
                                 <i class="bi bi-box-arrow-in-right"></i>
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>

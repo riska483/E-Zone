@@ -1,3 +1,18 @@
+<?php
+session_start();
+include "koneksi.php";
+
+if (!isset($_SESSION['login'])) {
+  header("Location: login.php");
+  exit;
+}
+
+if (!isset($_SESSION['status']) || $_SESSION['status'] !== 'admin') {
+  echo "<script>alert('Anda tidak memiliki akses sebagai admin');</script>";
+  header("Location: login.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +83,7 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6><?php echo ($_SESSION['username']) ? htmlspecialchars(($_SESSION['ussername'])) : 'Guest'; ?></h6>
+                            <h6><?php echo ($_SESSION['username']) ? htmlspecialchars(($_SESSION['username'])) : 'Guest'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>
@@ -108,7 +123,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link" href="kategori.php">
+        <a class="nav-link collapsed" href="kategori.php">
         <i class="bi bi-list-task"></i>
           <span>Kategori Produk</span>
         </a>
@@ -143,7 +158,7 @@
       </li><!-- End Laporan Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pengguna.php">
+        <a class="nav-link" href="pengguna.php">
           <i class="bi bi-person"></i>
           <span>Pengguna</span>
         </a>

@@ -1,4 +1,19 @@
 <?php
+session_start();
+include "koneksi.php";
+
+if (!isset($_SESSION['login'])) {
+  header("Location: login.php");
+  exit;
+}
+
+if (!isset($_SESSION['status']) || $_SESSION['status'] !== 'admin') {
+  echo "<script>alert('Anda tidak memiliki akses sebagai admin');</script>";
+  header("Location: login.php");
+  exit;
+}
+?>
+<?php
 include "koneksi.php";
 
 $id = $_GET['id'];
@@ -83,7 +98,7 @@ if (isset($_POST['simpan'])) {
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Riska Andriani</h6>
+                            <h6><?php echo isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>

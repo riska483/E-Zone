@@ -2,34 +2,37 @@
 session_start();
 require "koneksi.php";
 
-if (isset($_POST['login'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+if (isset($_POST["login"])) {
+  $username = $_POST["username"];
+  $password = $_POST["password"];
 
+  // Cek apakah username ditemukan
   $result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE username='$username'");
 
   if (mysqli_num_rows($result) === 1) {
     $row = mysqli_fetch_assoc($result);
 
-    if (password_verify($password, $row['password'])) {
-
-      if ($row['status'] === 'admin') {
-        $_SESSION['login'] = true;
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['status'] = $row['status'];
+    // Cek password
+    if (password_verify($password, $row["password"])) {
+      // Cek apakah status user adalah admin
+      if ($row["status"] === "admin") {
+        $_SESSION["login"] = true;
+        $_SESSION["username"] = $row["username"];
+        $_SESSION["status"] = $row["status"];
         header("Location: index.php");
         exit;
       } else {
-        echo "<script>alert('Anda tidak memiliki akses sebagai admin');</script>";
+        echo "<script>alert('Anda tidak memiliki akses sebagai admin.')</script>";
       }
     } else {
-      echo "<script>alert('Username atau password salah!');</script>";
+      echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
     }
   } else {
-    echo "<script>alert('Username atau password salah!');</script>";
+    echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
   }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +41,7 @@ if (isset($_POST['login'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login - ezone Admin</title>
+  <title>Login - Furnimart Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -61,6 +64,7 @@ if (isset($_POST['login'])) {
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -74,9 +78,9 @@ if (isset($_POST['login'])) {
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.php" class="logo d-flex align-items-center w-auto">
+                <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">ezone</span>
+                  <span class="d-none d-lg-block">Furnimart Admin</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -89,19 +93,20 @@ if (isset($_POST['login'])) {
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3" method="POST">
+                  <form class="row g-3" method="post">
 
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
+                      <label for="username" class="form-label">Username</label>
+                      <div class="input-group">
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
                       </div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
+                      <label for="password" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                     </div>
+
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit" name="login">Login</button>
                     </div>
@@ -111,7 +116,7 @@ if (isset($_POST['login'])) {
               </div>
 
               <div class="credits">
-                Designed by <a href="https://www.instagram.com/rskaaadr/">Riska Andriani</a>
+                Designed by <a href="https://instagram.com/dea.salsa.503/" target="_blank">Dea Salsabilla</a>
               </div>
 
             </div>
