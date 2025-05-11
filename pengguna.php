@@ -221,7 +221,7 @@
                                                 <td><?php echo $hasil['username']; ?></td>
                                                 <td><?php echo $hasil['status']; ?></td>
                                                 <td>
-                                                    <a herf="h_pengguna.php?id=<?php echo $hasil['id_user']; ?>"
+                                                    <a href="h_pengguna.php?id=<?php echo $hasil['id_user']; ?>"
                                                     class="btn btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
                                                     <i class="bi bi-trash"></i>
                                                     </a>
