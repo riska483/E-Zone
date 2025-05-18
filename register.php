@@ -320,7 +320,7 @@ $data = mysqli_fetch_array($sql);
                             <!-- Begin Footer Logo Area -->
                             <div class="col-lg-4 col-md-6">
                                 <div class="footer-logo">
-                                    <h1>Technozone</h1>
+                                    <h1>E-Zone</h1>
                                     <p class="info">
                                     E-Zone adalah toko online yang menyediakan berbagai produk elektronik berkualitas seperti TV, kipas angin dan barang elektronik lainnya dengan harga terbaik dan kualitas yang terbaik juga.
                                     </p>
