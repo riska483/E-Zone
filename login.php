@@ -1,6 +1,5 @@
 <?php
 session_start();
-<<<<<<< HEAD
 
 require "admin/koneksi.php";
 
@@ -25,40 +24,10 @@ if (isset($_POST["login"])) {
     }
   } else {
     echo "<script>alert('Username atau password yang anda masukkan salah')</script>";
-=======
-require "koneksi.php";
-
-if (isset($_POST['login'])) {
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $result = mysqli_query($koneksi, "SELECT * FROM tb_user WHERE username='$username'");
-
-  if (mysqli_num_rows($result) === 1) {
-    $row = mysqli_fetch_assoc($result);
-
-    if (password_verify($password, $row['password'])) {
-
-      if ($row['status'] === 'admin') {
-        $_SESSION['login'] = true;
-        $_SESSION['username'] = $row['username'];
-        $_SESSION['status'] = $row['status'];
-        header("Location: index.php");
-        exit;
-      } else {
-        echo "<script>alert('Anda tidak memiliki akses sebagai admin');</script>";
-      }
-    } else {
-      echo "<script>alert('Username atau password salah!');</script>";
-    }
-  } else {
-    echo "<script>alert('Username atau password salah!');</script>";
->>>>>>> 1b3f41503a6710ce2f522974d55a42a77d50725e
   }
 }
 ?>
 
-<<<<<<< HEAD
 <!doctype html>
 <html class="no-js" lang="zxx">
 
