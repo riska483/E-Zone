@@ -9,12 +9,10 @@ $data = mysqli_fetch_array($sql);
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- login-register31:27-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Register - Technozone</title>
+    <title>Register - E-Zone</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
@@ -56,8 +54,8 @@ $data = mysqli_fetch_array($sql);
 <body>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (Registrasi($_POST)) {
-            echo "<scriptter>alert('User baru berhasil ditambahkan');";
+        if (registrasi($_POST)) {
+            echo "<script>alert('User baru berhasil ditambahkan');";
             echo "window.location.href = 'login.php';</script>";
             exit;
         } else {
@@ -93,7 +91,7 @@ $data = mysqli_fetch_array($sql);
                                 <ul class="hm-menu">
                                     <!-- Begin Header Middle Wishlist Area -->
                                     <li class="hm-wishlist">
-                                        <a href="login.html">
+                                        <a href="login.php">
                                             <i class="fa fa-user"></i>
                                         </a>
                                     </li>
@@ -209,7 +207,7 @@ $data = mysqli_fetch_array($sql);
                         <div class="banner-wrapper text-center">
                             <img src="images/bg-banner/4.webp" alt="Banner Toko Elektronik" class="img-fluid" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%;">
                             <p class="mt-3" style="font-size: 16px; color: #555;">
-                                Temukan produk TV, Kipas Angin, dan produk elektronik berkualitas lainnya hanya di E-Zone!<br>
+                            Temukan produk TV, Kipas Angin, dan produk elektronik berkualitas lainnya hanya di E-Zone!<br>
                                 <a href="login.php" style="color: #007bff; text-decoration: underline;">Sudah punya akun? Login di sini.</a>
                             </p>
                         </div>
@@ -250,7 +248,6 @@ $data = mysqli_fetch_array($sql);
                     <!-- Begin Footer Shipping Area -->
                     <div class="footer-shipping pt-60 pb-55 pb-xs-25">
                         <div class="row">
-                            <!-- Mulai Area Kotak Pengiriman Li -->
                             <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
                                 <div class="li-shipping-inner-box">
                                     <div class="shipping-icon">
@@ -262,9 +259,7 @@ $data = mysqli_fetch_array($sql);
                                     </div>
                                 </div>
                             </div>
-                            <!-- Akhir Area Kotak Pengiriman Li -->
 
-                            <!-- Mulai Area Kotak Pengiriman Li -->
                             <div class="col-lg-3 col-md-6 col-sm-6 pb-sm-55 pb-xs-55">
                                 <div class="li-shipping-inner-box">
                                     <div class="shipping-icon">
@@ -276,9 +271,7 @@ $data = mysqli_fetch_array($sql);
                                     </div>
                                 </div>
                             </div>
-                            <!-- Akhir Area Kotak Pengiriman Li -->
 
-                            <!-- Mulai Area Kotak Pengiriman Li -->
                             <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                 <div class="li-shipping-inner-box">
                                     <div class="shipping-icon">
@@ -290,9 +283,7 @@ $data = mysqli_fetch_array($sql);
                                     </div>
                                 </div>
                             </div>
-                            <!-- Akhir Area Kotak Pengiriman Li -->
 
-                            <!-- Mulai Area Kotak Pengiriman Li -->
                             <div class="col-lg-3 col-md-6 col-sm-6 pb-xs-30">
                                 <div class="li-shipping-inner-box">
                                     <div class="shipping-icon">
@@ -304,7 +295,6 @@ $data = mysqli_fetch_array($sql);
                                     </div>
                                 </div>
                             </div>
-                            <!-- Akhir Area Kotak Pengiriman Li -->
                         </div>
                     </div>
 
@@ -332,7 +322,7 @@ $data = mysqli_fetch_array($sql);
                                     </li>
                                     <li>
                                         <span>Telepon: </span>
-                                        <a href="#">(+62) 877 3789 3311</a>
+                                        <a href="tel:+6287737893311">(+62) 877 3789 3311</a>
                                     </li>
                                     <li>
                                         <span>Email: </span>
@@ -458,6 +448,5 @@ $data = mysqli_fetch_array($sql);
     <script src="js/main.js"></script>
 </body>
 
-<!-- login-register31:27-->
 
 </html>

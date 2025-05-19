@@ -699,7 +699,7 @@ session_start();
 
                         <!-- Footer Logo Area End Here -->
                         <!-- Begin Footer Block Area -->
-                        < <div class="col-lg-2 col-md-3 col-sm-6">
+                        <div class="col-lg-2 col-md-3 col-sm-6">
 
                     </div>
                     <!-- Footer Block Area End Here -->
