@@ -688,7 +688,7 @@ session_start();
                                 </li>
                                 <li>
                                     <span>Telepon: </span>
-                                    <a href="#">(+62) 877 3789 3311</a>
+                                    <a href="tel:+6287737893311">(+62) 877 3789 3311</a>
                                 </li>
                                 <li>
                                     <span>Email: </span>
@@ -799,7 +799,7 @@ session_start();
                                     </div>
                                     <div class="product-desc">
                                         <p id="modal-desk"></p>
-                                        <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p> <!-- ✅ Tambahan -->
+                                        <p><strong>Stok tersedia:</strong> <span id="modal-stok">0</span> unit</p>
                                     </div>
 
                                     <div class="single-add-to-cart">
