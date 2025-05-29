@@ -68,7 +68,7 @@
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Riska Andriani</h6>
+                            <h6><?php echo ($_SESSION['username']) ? htmlspecialchars(($_SESSION['username'])) : 'Guest'; ?></h6>
                             <span>Admin</span>
                         </li>
                         <li>
@@ -107,14 +107,14 @@
 
 
       <li class="nav-item">
-        <a class="nav-link" href="kategori.php">
+        <a class="nav-link collapsed" href="kategori.php">
         <i class="bi bi-list-task"></i>
           <span>Kategori Produk</span>
         </a>
       </li><!-- End Kategori Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="produk.php">
+        <a class="nav-link" href="produk.php">
           <i class="bi bi-bag-heart"></i>
           <span>Produk</span>
         </a>
