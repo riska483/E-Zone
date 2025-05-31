@@ -180,8 +180,8 @@
                         ?>
 
                         <div class="filter-bar mt-3">
-                            <from class="fiter-from d-flex align-items-center" method="GET" action="">
-                                <select name="kategori" class="from-select me-2" style="max-width: 200px;
+                            <form class="fiter-form d-flex align-items-center" method="GET" action="">
+                                <select name="kategori" class="form-select me-2" style="max-width: 200px;
                                 " title="Pilih kategori">
                                     <option value="">-- Semua Kategori --</option>
                                     <?php
@@ -197,7 +197,7 @@
                                     ?>
                                 </select>
                                 <button type="submit" class="btn btn-primary me-2">Filter</button>
-                            </from>
+                            </form>
                         </div><!-- End Filter Bar -->
 
                     </div>    
